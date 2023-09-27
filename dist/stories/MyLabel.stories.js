@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { MyLabel } from "../components/MyLabel";
-
-
-const meta = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomColor = exports.Secondary = exports.AllCaps = exports.Basic = void 0;
+var MyLabel_1 = require("../components/MyLabel");
+var meta = {
     title: 'MyLabel',
-    component: MyLabel,
+    component: MyLabel_1.MyLabel,
     tags: ['autodocs'],
     parameters: {
         layout: 'centered'
@@ -14,35 +14,29 @@ const meta = {
         color: { control: 'inline-radio' },
         allCaps: { control: 'boolean' }
     }
-} as Meta<typeof MyLabel>;
-
-export default meta;
-
-type Story = StoryObj<typeof meta>
-
-export const Basic: Story = {
+};
+exports.default = meta;
+exports.Basic = {
     args: {
         label: "Basic Label"
     }
-}
-export const AllCaps: Story = {
+};
+exports.AllCaps = {
     args: {
         label: "All Caps Label",
         allCaps: true
     }
-}
-
-export const Secondary: Story = {
+};
+exports.Secondary = {
     args: {
         label: "Secondary Label"
     }
-}
-
-export const CustomColor: Story = {
+};
+exports.CustomColor = {
     args: {
         label: "Custom Color Label",
     },
     argTypes: {
         fontColor: { control: 'color' }
     }
-}
+};
